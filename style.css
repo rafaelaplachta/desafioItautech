@@ -51,12 +51,33 @@ body{
 
     input{
         height: 30px;
-        margin-left: 20px;
+        margin-left: 30px;
         border: 1px solid;
         border-radius: 6px;
         border-color: darkblue;
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        text-align: center;
+        text-align:justify;
     }
     
+    #pcampos{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 12pt;
+        color: #FF0000 ;
+    }
     
+    #rodape{
+        text-align: center;
+        font-size: 12pt;
+        color:#FFFFFF;
+    }
+
+    #enviar{
+        background-color: darkblue;
+        margin-left: 50%;
+        height: 100px;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 18pt;
+        font-size:xx-large;
+        color: white;
+       }
+       
