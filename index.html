@@ -40,15 +40,19 @@
             </div>
 
             <div class="campos">
-                <label for="celular">*Celular:</label>
-                <input type="text" name="celular" id="celular" maxlength="14">
-            </div>
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" placeholder="Informe seu e-mail." </div>
 
-            <div class="campos">
-                <label for="fone">Telefone Fixo</label>
+                <div class="campos">
+                    <label for="celular">*Celular:</label>
+                    <input type="text" name="celular" id="celular" maxlength="14">
+                </div>
 
-                <input type="text" name="fone" id="fone" maxlength="13">
-            </div>
+                <div class="campos">
+                    <label for="fone">Telefone Fixo</label>
+
+                    <input type="text" name="fone" id="fone" maxlength="13">
+                </div>
         </fieldset>
 
         <fieldset class="campoGeral">
@@ -66,12 +70,56 @@
                     <input type="text" name="rua" id="rua" minlength="9" placeholder="Avenida, Rua, Travessa, etc.">
 
                     <label for="numero">*Número:</label>
-<input type="number" name="numero" id="numero" maxlength="5">
+                    <input type="number" name="numero" id="numero" maxlength="5">
+                </div>
+            </div>
 
+            <div class="campos">
+                <label for="bairro">Bairro:</label>
+                <input type="text" name="bairro" id="bairro" minlength="3" placeholder="Digite o nome do bairro.">
+            </div>
 
+            <div class="campos">
+                <div class="campoDuplo">
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" name="cidade" id="cidade" minlength="3" placeholder="Digite o nome da Cidade.">
 
+                    <label for="estado">
+                        <UF:></U>:
+                    </label>
+                    <select id="estado">
+                        <option value="select">Selecione</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
 
-
+                </div>
+            </div>
 
     </form>
 </body>
