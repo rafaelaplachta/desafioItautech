@@ -11,3 +11,5 @@ Funcionalidades do projeto:
     > Validação simples dos campos com o input type "text": possuem um número mínimo de caracteres que devem ser digitados, caso contrário, é emitida ao usuário uma mensagem informando sobre o mínimo de caracteres.
 
     >Outra forma de validação implantada nos campos [Nome, Logradouro, bairro  e Cidade], é a de que, ao tentar digitar números nesses campos, o usuário é informado que esse formato não é válido. 
+
+    > O campo (Número) também recebe validação com a limitação de caracteres, e através da obrigatoriedade de que o campo seja preenchido com números.
