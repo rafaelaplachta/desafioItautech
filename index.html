@@ -41,18 +41,19 @@
 
             <div class="campos">
                 <label for="email">E-mail:</label>
-                <input type="email" name="email" id="email" placeholder="Informe seu e-mail." </div>
+                <input type="email" name="email" id="email" placeholder="Digite seu e-mail.">
+            </div>
 
-                <div class="campos">
-                    <label for="celular">*Celular:</label>
-                    <input type="text" name="celular" id="celular" maxlength="14">
-                </div>
+            <div class="campos">
+                <label for="celular">*Celular:</label>
+                <input type="text" name="celular" id="celular" maxlength="14">
+            </div>
 
-                <div class="campos">
-                    <label for="fone">Telefone Fixo</label>
+            <div class="campos">
+                <label for="fone">Telefone Fixo</label>
 
-                    <input type="text" name="fone" id="fone" maxlength="13">
-                </div>
+                <input type="text" name="fone" id="fone" maxlength="13">
+            </div>
         </fieldset>
 
         <fieldset class="campoGeral">
@@ -84,9 +85,9 @@
                     <label for="cidade">Cidade:</label>
                     <input type="text" name="cidade" id="cidade" minlength="3" placeholder="Digite o nome da Cidade.">
 
-                    <label for="estado">
-                        <UF:></U>:
-                    </label>
+                    <label for="estado">UF:</label>
+
+
                     <select id="estado">
                         <option value="select">Selecione</option>
                         <option value="AC">Acre</option>
@@ -121,7 +122,17 @@
                 </div>
             </div>
 
+        </fieldset>
+        <p id=pCampos"><span> os campos marcados com * são de preenchimento obrigatório.</span></p>
+
+        <input type="submit" value="enviar" id="enviar">
+
     </form>
+
+    <footer>
+        <p id="rodape"> 2021 |Banco Itaú </p>
+    </footer>
+    
 </body>
 
 
