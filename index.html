@@ -24,8 +24,8 @@
 
             <div class="campos">
                 <label for="nome">*Nome Completo:</label>
-                <input type="text" name="nome" id="nome" size="80" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" /
-                    minlength="6" placeholder="Digite seu nome e sobrenome" autocomplete="off">
+                <input type="text" name="nome" id="nome" size="80" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$"
+                    / minlength="6" placeholder="Digite seu nome e sobrenome" autocomplete="off">
             </div>
 
             <div class="campos">
@@ -43,7 +43,7 @@
 
             <div class="campos">
                 <label for="email">E-mail:</label>
-                <input type="email" name="email" id="email" size="40" placeholder="Digite seu e-mail.">
+                <input type="email" name="email" id="email" size="40" placeholder="Digite seu e-mail." autocomplete="off">
             </div>
 
             <div class="campos">
@@ -63,16 +63,14 @@
 
             <div class="campos">
 
-                <label for="cep">CEP:</label>
-                <input type="text" name="cep" id="cep" size="10" maxlength="10">
+                <label for="cep">*CEP:</label>
+                <input type="text" name="cep" id="cep" required size="8" pattern="[0-9]+$" / maxlength="8" autocomplete="off">
             </div>
 
             <div class="campos">
                 <div class="campoDuplo">
                     <label for="rua">*Logradouro:</label>
-                    <input type="text" name="rua" id="rua" size="80"
-                        pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" / minlength="9"
-                        placeholder="Avenida, Rua, Travessa, etc." autocomplete="off">
+                    <input type="text" name="rua" id="rua" size="80" autocomplete="off">
 
 
                     <label for="numero">*Número:</label>
@@ -83,17 +81,13 @@
 
             <div class="campos">
                 <label for="bairro">Bairro:</label>
-                <input type="text" name="bairro" id="bairro" size="80"
-                    pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" / minlength="3"
-                    placeholder="Digite o nome do bairro." autocomplete="off">
+                <input type="text" name="bairro" id="bairro" size="80" autocomplete="off">
             </div>
 
             <div class="campos">
                 <div class="campoDuplo">
                     <label for="cidade">Cidade:</label>
-                    <input type="text" name="cidade" id="cidade" size="80"
-                        pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" / minlength="3"
-                        placeholder="Digite o nome da Cidade." autocomplete="off">
+                    <input type="text" name="cidade" id="cidade" size="80" autocomplete="off">
 
 
                     <label for="estado">UF:</label>
