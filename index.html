@@ -70,22 +70,29 @@
             <div class="campos">
                 <div class="campoDuplo">
                     <label for="rua">*Logradouro:</label>
-                    <input type="text" name="rua" id="rua" minlength="9" placeholder="Avenida, Rua, Travessa, etc.">
+                    <input type="text" name="rua" id="rua" required="required" name="text"
+                        pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" / minlength="9"
+                        placeholder="Avenida, Rua, Travessa, etc." autocomplete="off">
+
 
                     <label for="numero">*Número:</label>
-                    <input type="number" name="numero" id="numero" maxlength="5">
+                    <input type="text" name="numero" id="numero" maxlength="5">
                 </div>
             </div>
 
             <div class="campos">
                 <label for="bairro">Bairro:</label>
-                <input type="text" name="bairro" id="bairro" minlength="3" placeholder="Digite o nome do bairro.">
+                <input type="text" name="bairro" id="bairro" required="required" name="text"
+                    pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" / minlength="3"
+                    placeholder="Digite o nome do bairro." autocomplete="off">
             </div>
 
             <div class="campos">
                 <div class="campoDuplo">
                     <label for="cidade">Cidade:</label>
-                    <input type="text" name="cidade" id="cidade" minlength="3" placeholder="Digite o nome da Cidade.">
+                    <input type="text" name="cidade" id="cidade" required="required" name="text"
+                        pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" / minlength="3"
+                        placeholder="Digite o nome da Cidade." autocomplete="off">
 
                     <label for="estado">UF:</label>
 
@@ -134,6 +141,8 @@
     <footer>
         <p id="rodape"> 2021 |Banco Itaú </p>
     </footer>
+
+    <script type="text/javascript" src="script.js"></script>
 
 </body>
 
