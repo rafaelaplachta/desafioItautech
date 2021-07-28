@@ -1,0 +1,62 @@
+body{
+    background-color: darkblue;
+}
+
+#logo{
+    display: flex;
+    justify-content: center;
+}
+
+#cabecalho{
+    margin-top: 5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #FFFF00;
+    text-align: center;
+    text: shadow 2px;
+}
+
+#formulario{
+    display: block;
+    justify-content:center;
+    background-color: #ffa500 ;
+    margin: 10%;
+    }
+    
+    .campoGeral{
+        border: 2px double;
+        border-radius: 6px;
+        border-color: darkblue;
+        box-shadow: 2px blue;
+    }
+    .legenda{
+        margin-bottom: 8%;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: x-large;
+        font-size: 14pt;
+        color: black;
+        font-weight:700; 
+    }
+
+    .campos{
+        margin-bottom: 5%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 520;
+        font-size: 12pt;
+    }
+
+    .campoDuplo{
+        display: inline flex;
+        justify-content:space-around;
+    }
+
+    input{
+        height: 30px;
+        margin-left: 20px;
+        border: 1px solid;
+        border-radius: 6px;
+        border-color: darkblue;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        text-align: center;
+    }
+    
+    
