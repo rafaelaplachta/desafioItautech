@@ -30,9 +30,6 @@ inputCPF.addEventListener('focus', function (e) {
 })
 
 
-
-
-
 inputCPF.addEventListener("keydown", function (e) {
 
     e.preventDefault()
@@ -102,6 +99,34 @@ inputRG.addEventListener("keydown", function (e) {
 })
 
 
+//Máscara para os campos de telefone.
+
+
+function mask(o, f) {
+    setTimeout(function() {
+      var v = mphone(o.value);
+      if (v != o.value) {
+        o.value = v;
+      }
+    }, 1);
+  }
+  
+  function mphone(v) {
+    var r = v.replace(/\D/g, "");
+    r = r.replace(/^0/, "");
+    if (r.length > 10) {
+      r = r.replace(/^(\d\d)(\d{5})(\d{4}).*/, "($1) $2-$3");
+    } else if (r.length > 5) {
+      r = r.replace(/^(\d\d)(\d{4})(\d{0,4}).*/, "($1) $2-$3");
+    } else if (r.length > 2) {
+      r = r.replace(/^(\d\d)(\d{0,5})/, "($1) $2");
+    } else {
+      r = r.replace(/^(\d*)/, "($1");
+    }
+    return r;
+  }
+
+
 //Função para verificar se os campos obrigatórios estão vazios quando o usuário tentar enviar o formulário.
 
 function valida() {
@@ -115,9 +140,9 @@ function valida() {
         document.getElementById(cpf).focus();
         return false
     }
-    if (document.formulario.celular.value == "") {
+    if (document.formulario.phone.value == "") {
         alert("Por favor, preencha o campo 'Celular'.");
-        document.getElementById("celular").focus();
+        document.getElementById("phone").focus();
         return false;
     }
     if (document.formulario.rua.value == "") {

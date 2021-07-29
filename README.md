@@ -15,3 +15,10 @@ Funcionalidades do projeto:
                     - (Número = apenas números), impedindo que o cliente envie o cadastro com letras no campo "Número" .
 
                     > Ao digitar o número no campo "CEP", é realizada uma busca  na URL do "viacep", permitindo que o CEP seja validado e os campos [Logradouro, Bairro e Cidade] sejam preenchidos automaticamente.
+                
+
+Referências:
+
+-Mentoria do professor Douglas Morais (Gama Academy); 
+-"Como consumir uma API de CEP com javascript puro| ViaCEP | #01" no YouTube (https://youtu.be/imk6Y0viabg);   
+-Stack Overflow em Português (https://pt.stackoverflow.com).

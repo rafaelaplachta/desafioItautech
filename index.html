@@ -47,12 +47,14 @@
             </div>
 
             <div class="campos">
-                <label for="celular">*Celular:</label>
-                <input type="text" name="celular" id="celular" size="14" maxlength="14">
-            </div>
+                <label for="phone">*Celular:</label>
+                <input type="text" name="phone" id="phone" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" />
+                </div>
 
             <div class="campos">
-                <label for="fone">Telefone Fixo</label>
+                <label for="phoneFixo">Telefone Fixo</label>
+                <input type="text" name="phoneFixo" id="phoneFixo" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" />
+            </div>
 
                 <input type="text" name="fone" id="fone" size="13" maxlength="13">
             </div>

@@ -1,3 +1,5 @@
+//Adicionando "viacep" ao cadastro.  
+
 'use strict';
 
 const limparFormulario = (rua) => {
@@ -9,8 +11,6 @@ const limparFormulario = (rua) => {
     document.getElementById('cidade').value = '';
 
 }
-
-
 
 const preencherFormulario = (rua) => {
 
@@ -26,15 +26,12 @@ const preencherFormulario = (rua) => {
 const eNumero = (numero) => /^[0-9]+$/.test(numero);
 
 
-
+//Validando o número de CEP digitado.
 const cepValido = (cep) => cep.length == 8 && eNumero(cep);
-
-
 
 const pesquisarCep = async () => {
 
     limparFormulario();
-
 
 
     const cep = document.getElementById('cep').value;
@@ -71,4 +68,5 @@ const pesquisarCep = async () => {
 
 document.getElementById('cep')
 
+// A pesquisa do CEP será realizada no momento em que o foco sair da caixa de edição do input "CEP".
     .addEventListener('focusout', pesquisarCep);
