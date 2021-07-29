@@ -145,6 +145,11 @@ function valida() {
         document.getElementById("phone").focus();
         return false;
     }
+    if (document.formulario.cep.value == "") {
+        alert("Por favor, preencha o campo 'CEP'.");
+        document.getElementById("cep").focus();
+        return false
+    }
     if (document.formulario.rua.value == "") {
         alert("por favor, preencha oo campo 'Logradouro'.");
         document.getElementById("rua").focus();
@@ -160,4 +165,3 @@ function valida() {
         return false;
     }
 }
-

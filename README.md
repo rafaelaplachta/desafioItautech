@@ -4,7 +4,8 @@ Objetivo:
 
 >Criar um formulario para registrar dados pessoais.
 
-Funcionalidades do projeto:
+Funcionalidades do cadastro:
+
 > Todos os inputs estão conectados (através do atributo "id") com a tag label. 
     Além de ser um recurso de acessibilidade para os usuários de leitores de telas, essa função também possibilita que o cliente clique com o mouse sobre o nome do campo para preencher o formulário. Desse modo, não é necessário clicar em cima do campo para que inicie a edição do mesmo.
 
