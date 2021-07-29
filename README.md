@@ -22,4 +22,8 @@ Referências:
 
 -Mentoria do professor Douglas Morais (Gama Academy); 
 -"Como consumir uma API de CEP com javascript puro| ViaCEP | #01" no YouTube (https://youtu.be/imk6Y0viabg);   
--Stack Overflow em Português (https://pt.stackoverflow.com).
+-Stack Overflow em Português (https://pt.stackoverflow.com);
+-Receita Federal(http://www.receita.fazenda.gov.br/aplicacoes/atcta/cpf/funcoes.js);
+-w3schools (https://www.w3schools.com/js/js_functions.asp);
+-bosontreinamentos(http://www.bosontreinamentos.com.br/);
+-Dicas de Programação(https://dicasdeprogramacao.com.br).

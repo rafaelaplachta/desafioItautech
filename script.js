@@ -133,8 +133,11 @@ function validaCPF() {
         cpf == "77777777777" ||
         cpf == "88888888888" ||
         cpf == "99999999999") {
+
         document.getElementById("cpf").style.backgroundColor = "#faa"; //isso deixa o campo avermelhado
-        document.getElementById("cpf").value.focus();
+        document.getElementById("cpf").focus();
+
+        alert("CPF inválido")
         return false;
     } else {
         var soma = 0;
@@ -175,7 +178,7 @@ function validaCPF() {
     } else {
         alert("CPF inválido")
         document.getElementById("cpf").style.backgroundColor = "#faa";
-        document.getElementById("cpf").value.focus();
+        document.getElementById("cpf").focus();
         return false;
     }
 }
@@ -215,7 +218,8 @@ function valida() {
         return false
     }
     else {
-        alert("'name.value +', seu cadastro foi enviado com sucesso!");
+        alert("'nomeFim' + seu cadastro foi enviado com sucesso!");
         return false;
     }
 }
+var nomeFim = document.getElementById("nome").value

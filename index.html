@@ -29,6 +29,13 @@
             </div>
 
             <div class="campos">
+                <label for="sexo">Sexo:</label>
+                    <select name="sexo" id="sexo">
+                        <option value="select">Selecione</option>
+                        <option value="m">Masculino</option>
+                        <option value="f">Feminino</option>
+                    </select>
+
             </div>
 
             <div class="campos">
@@ -39,6 +46,9 @@
             <div class="campos">
                 <label for="cpf">*CPF:</label>
                 <input type="text" name="cpf" id="cpf" maxlength="14">
+                <br>
+                <br>
+                <button id="btn" onclick="validaCPF()">Validar CPF</button>
             </div>
 
             <div class="campos">
