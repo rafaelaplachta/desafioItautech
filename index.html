@@ -30,22 +30,22 @@
 
             <div class="campos">
                 <label for="sexo">Sexo:</label>
-                    <select name="sexo" id="sexo">
-                        <option value="select">Selecione</option>
-                        <option value="m">Masculino</option>
-                        <option value="f">Feminino</option>
-                    </select>
+                <select name="sexo" id="sexo">
+                    <option value="select">Selecione</option>
+                    <option value="m">Masculino</option>
+                    <option value="f">Feminino</option>
+                </select>
 
             </div>
 
             <div class="campos">
                 <label for="rg">RG:</label>
-                <input type="text" name="rg" id="rg" maxlength="11">
+                <input type="text" name="rg" id="rg" size="11" maxlength="11" autocomplete="off">
             </div>
 
             <div class="campos">
                 <label for="cpf">*CPF:</label>
-                <input type="text" name="cpf" id="cpf" maxlength="14">
+                <input type="text" name="cpf" id="cpf" size="14" maxlength="14" autocomplete="off">
                 <br>
                 <br>
                 <button id="btn" onclick="validaCPF()">Validar CPF</button>
@@ -53,18 +53,22 @@
 
             <div class="campos">
                 <label for="email">E-mail:</label>
-                <input type="email" name="email" id="email" size="40" placeholder="Digite seu e-mail." autocomplete="off">
+                <input type="email" name="email" id="email" size="40" placeholder="Digite seu e-mail."
+                    autocomplete="off">
             </div>
 
             <div class="campos">
                 <label for="fone">*Celular:</label>
-                    <input type="text" id="phone" name="phone" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" />
+                <input type="text" name="phone" id="phone" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);"
+                    / placeholder="Digite o número do celular com o DDD" autocomplete="off">
 
-                </div>
-                <div class="campos">
-                    <label for="telefone">Telefone Fixo</label>
-                    <input type="text" name="telefone" id="telefone" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" />
-                </div>
+            </div>
+            <div class="campos">
+                <label for="telefone">Telefone Fixo</label>
+                <input type="text" name="telefone" id="telefone" onkeypress="mask(this, mphone);"
+                    onblur="mask(this, mphone);" /
+                    placeholder="Digite o número do telefone com o DDD" autocomplete="off">
+            </div>
 
 
         </fieldset>
@@ -75,13 +79,13 @@
             <div class="campos">
 
                 <label for="cep">*CEP:</label>
-                <input type="text" name="cep" id="cep" size="8" pattern="[0-9]+$" / maxlength="8" autocomplete="off">
+                <input type="text" name="cep" id="cep" size="8" pattern="[0-9]+$" / maxlength="8" placeholder="Apenas números" autocomplete="off">
             </div>
 
             <div class="campos">
                 <div class="campoDuplo">
                     <label for="rua">*Logradouro:</label>
-                    <input type="text" name="rua" id="rua" size="80" autocomplete="off">
+                    <input type="text" name="rua" id="rua" size="80" placeholder="Avenida, Rua, Travessa, etc." autocomplete="off">
 
 
                     <label for="numero">*Número:</label>
@@ -92,16 +96,16 @@
 
             <div class="campos">
                 <label for="bairro">Bairro:</label>
-                <input type="text" name="bairro" id="bairro" size="80" autocomplete="off">
+                <input type="text" name="bairro" id="bairro" size="80" placeholder="Digite o nome do bairro" autocomplete="off">
             </div>
 
             <div class="campos">
                 <div class="campoDuplo">
                     <label for="cidade">Cidade:</label>
-                    <input type="text" name="cidade" id="cidade" size="80" autocomplete="off">
+                    <input type="text" name="cidade" id="cidade" size="80" placeholder="Digite o nome da Cidade" autocomplete="off">
 
 
-                    <label for="estado">UF:</label>
+                    <label for="estado">Estado:</label>
                     <select id="estado">
                         <option value="select">Selecione</option>
                         <option value="AC">Acre</option>
