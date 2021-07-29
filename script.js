@@ -218,8 +218,7 @@ function valida() {
         return false
     }
     else {
-        alert("'nomeFim' + seu cadastro foi enviado com sucesso!");
+        alert("Seu cadastro foi enviado com sucesso!");
         return false;
     }
 }
-var nomeFim = document.getElementById("nome").value
