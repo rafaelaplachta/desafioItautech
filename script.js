@@ -116,14 +116,17 @@ function mphone(v) {
     }
     return r;
 }
-//
+
+// Início da função responsável por validar o CPF através dos dois últimos dígitos.
 function validaCPF() {
     var cpf = document.getElementById("cpf").value;
+    //Substituição da string, capturando apenas os dígitos, sem pontos e traço. 
     cpf = cpf.replace(".", "");
     cpf = cpf.replace("-", "");
     cpf = cpf.replace(".", "");
 
-    //Elimina CPFs com números repetidos.
+    //Elimina CPFs com campo de cpf preenchido com números de dígitos diferente de 11.
+    // Elimina também números repetidos quando digitados pelo cliente..
 
     if (cpf.length != 11 ||
         cpf == "00000000000" ||
@@ -140,11 +143,10 @@ function validaCPF() {
         document.getElementById("cpf").focus();
         document.getElementById("cpf").style.backgroundColor = "#faa"; //isso deixa o campo avermelhado
 
-
         alert("CPF inválido. Por favor, informe um CPF válido.")
         document.getElementById("cpf").focus();
         return false;
-    } else {
+    } else { //Iniciando o cálculo de validação dos dígitos.
         var soma = 0;
         soma = soma + (parseInt(cpf.substring(0, 1))) * 10;
         soma = soma + (parseInt(cpf.substring(1, 2))) * 9;

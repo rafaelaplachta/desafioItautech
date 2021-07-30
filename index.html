@@ -9,155 +9,162 @@
 </head>
 
 <body>
-    <div id="logo">
-        <img id="itau"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Banco_Ita%C3%BA_logo.svg/1011px-Banco_Ita%C3%BA_logo.svg.png"
-            , Linha 20, Coluna 2" alt="logo Banco Itaú" width="200px" height="200px">
-    </div>
-
+    <header>
+        <div id="logo">
+            <img id="itau"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Banco_Ita%C3%BA_logo.svg/1011px-Banco_Ita%C3%BA_logo.svg.png"
+                , Linha 20, Coluna 2" alt="logo Banco Itaú" width="200px" height="200px">
+        </div>
+    </header>
     <h1 id="cabecalho">CADASTRO PESSOAL</h1>
+    <! Por padrão, quando não é informado o método, os dados são enviados pelo método GET. -->
+        <! Associando a função valida ao envio do formulário.->
+            <form name="formulario" id="formulario" method="#" action="#" onsubmit="valida()">
 
-    <form name="formulario" id="formulario" method="#" action="#" onsubmit="valida()">
+                <fieldset class="campoGeral">
+                    <legend class="legenda">Dados Pessoais</legend>
 
-        <fieldset class="campoGeral">
-            <legend class="legenda">Dados Pessoais</legend>
+                    <div class="campos">
+                        <label for="nome">*Nome Completo:</label>
+                        <input type="text" name="nome" id="nome" size="80"
+                            pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" / minlength="6"
+                            placeholder="Digite seu nome e sobrenome" autocomplete="off">
+                    </div>
 
-            <div class="campos">
-                <label for="nome">*Nome Completo:</label>
-                <input type="text" name="nome" id="nome" size="80" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$"
-                    / minlength="6" placeholder="Digite seu nome e sobrenome" autocomplete="off">
-            </div>
+                    <div class="campos">
+                        <label for="sexo">Sexo:</label>
+                        <select name="sexo" id="sexo">
+                            <option value="select">Selecione</option>
+                            <option value="m">Masculino</option>
+                            <option value="f">Feminino</option>
+                        </select>
 
-            <div class="campos">
-                <label for="sexo">Sexo:</label>
-                <select name="sexo" id="sexo">
-                    <option value="select">Selecione</option>
-                    <option value="m">Masculino</option>
-                    <option value="f">Feminino</option>
-                </select>
+                    </div>
 
-            </div>
+                    <div class="campos">
+                        <label for="rg">RG:</label>
+                        <input type="text" name="rg" id="rg" size="11" maxlength="11" autocomplete="off">
+                    </div>
 
-            <div class="campos">
-                <label for="rg">RG:</label>
-                <input type="text" name="rg" id="rg" size="11" maxlength="11" autocomplete="off">
-            </div>
+                    <div class="campos">
+                        <label for="cpf">*CPF:</label>
+                        <input type="text" name="cpf" id="cpf" size="14" maxlength="14" autocomplete="off">
 
-            <div class="campos">
-                <label for="cpf">*CPF:</label>
-                <input type="text" name="cpf" id="cpf" size="14" maxlength="14" autocomplete="off">
+                    </div>
 
-            </div>
+                    <div class="campos">
+                        <label for="email">E-mail:</label>
+                        <input type="email" name="email" id="email" size="40" placeholder="Digite seu e-mail."
+                            autocomplete="off">
+                    </div>
 
-            <div class="campos">
-                <label for="email">E-mail:</label>
-                <input type="email" name="email" id="email" size="40" placeholder="Digite seu e-mail."
-                    autocomplete="off">
-            </div>
+                    <div class="campos">
+                        <label for="fone">*Celular:</label>
+                        <input type="text" name="phone" id="phone" onkeypress="mask(this, mphone);"
+                            onblur="mask(this, mphone);" / placeholder="Digite o número do celular com o DDD"
+                            autocomplete="off">
 
-            <div class="campos">
-                <label for="fone">*Celular:</label>
-                <input type="text" name="phone" id="phone" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);"
-                    / placeholder="Digite o número do celular com o DDD" autocomplete="off">
-
-            </div>
-            <div class="campos">
-                <label for="telefone">Telefone Fixo</label>
-                <input type="text" name="telefone" id="telefone" onkeypress="mask(this, mphone);"
-                    onblur="mask(this, mphone);" / placeholder="Digite o número do telefone com o DDD"
-                    autocomplete="off">
-            </div>
-
-
-        </fieldset>
-
-        <fieldset class="campoGeral">
-            <legend class="legenda">Endereço</legend>
-
-            <div class="campos">
-
-                <label for="cep">*CEP:</label>
-                <input type="text" name="cep" id="cep" size="8" pattern="[0-9]+$" / maxlength="8"
-                    placeholder="Apenas números" autocomplete="off">
-                <br>
-                <br>
-                <p>Digite o CEP e pressione a tecla enter.</p>
-            </div>
-
-            <div class="campos">
-                <div class="campoDuplo">
-                    <label for="rua">*Logradouro:</label>
-                    <input type="text" name="rua" id="rua" size="80" placeholder="Avenida, Rua, Travessa, etc."
-                        autocomplete="off">
+                    </div>
+                    <div class="campos">
+                        <label for="telefone">Telefone Fixo</label>
+                        <input type="text" name="telefone" id="telefone" onkeypress="mask(this, mphone);"
+                            onblur="mask(this, mphone);" / placeholder="Digite o número do telefone com o DDD"
+                            autocomplete="off">
+                    </div>
 
 
-                    <label for="numero">*Número:</label>
-                    <input type="text" name="numero" id="numero" size="5" pattern="[0-9]+$" / maxlength="5"
-                        autocomplete="off">
-                </div>
-            </div>
+                </fieldset>
 
-            <div class="campos">
-                <label for="bairro">Bairro:</label>
-                <input type="text" name="bairro" id="bairro" size="80" placeholder="Digite o nome do bairro"
-                    autocomplete="off">
-            </div>
+                <fieldset class="campoGeral">
+                    <legend class="legenda">Endereço</legend>
 
-            <div class="campos">
-                <div class="campoDuplo">
-                    <label for="cidade">Cidade:</label>
-                    <input type="text" name="cidade" id="cidade" size="80" placeholder="Digite o nome da Cidade"
-                        autocomplete="off">
+                    <div class="campos">
+
+                        <label for="cep">*CEP:</label>
+                        <input type="text" name="cep" id="cep" size="8" pattern="[0-9]+$" / maxlength="8"
+                            placeholder="Apenas números" autocomplete="off">
+                        <br>
+                        <br>
+                        <p>Digite o CEP e pressione a tecla enter.</p>
+                    </div>
+
+                    <div class="campos">
+                        <div class="campoDuplo">
+                            <label for="rua">*Logradouro:</label>
+                            <input type="text" name="rua" id="rua" size="80" placeholder="Avenida, Rua, Travessa, etc."
+                                autocomplete="off">
 
 
-                    <label for="estado">Estado:</label>
-                    <select id="estado">
-                        <option value="select">Selecione</option>
-                        <option value="AC">Acre</option>
-                        <option value="AL">Alagoas</option>
-                        <option value="AP">Amapá</option>
-                        <option value="AM">Amazonas</option>
-                        <option value="BA">Bahia</option>
-                        <option value="CE">Ceará</option>
-                        <option value="DF">Distrito Federal</option>
-                        <option value="ES">Espírito Santo</option>
-                        <option value="GO">Goiás</option>
-                        <option value="MA">Maranhão</option>
-                        <option value="MT">Mato Grosso</option>
-                        <option value="MS">Mato Grosso do Sul</option>
-                        <option value="MG">Minas Gerais</option>
-                        <option value="PA">Pará</option>
-                        <option value="PB">Paraíba</option>
-                        <option value="PR">Paraná</option>
-                        <option value="PE">Pernambuco</option>
-                        <option value="PI">Piauí</option>
-                        <option value="RJ">Rio de Janeiro</option>
-                        <option value="RN">Rio Grande do Norte</option>
-                        <option value="RS">Rio Grande do Sul</option>
-                        <option value="RO">Rondônia</option>
-                        <option value="RR">Roraima</option>
-                        <option value="SC">Santa Catarina</option>
-                        <option value="SP">São Paulo</option>
-                        <option value="SE">Sergipe</option>
-                        <option value="TO">Tocantins</option>
-                    </select>
+                            <label for="numero">*Número:</label>
+                            <input type="text" name="numero" id="numero" size="5" pattern="[0-9]+$" / maxlength="5"
+                                autocomplete="off">
+                        </div>
+                    </div>
 
-                </div>
-            </div>
+                    <div class="campos">
+                        <label for="bairro">Bairro:</label>
+                        <input type="text" name="bairro" id="bairro" size="80" placeholder="Digite o nome do bairro"
+                            autocomplete="off">
+                    </div>
 
-        </fieldset>
-        <p id=pCampos"><span> os campos marcados com * são de preenchimento obrigatório.</span></p>
+                    <div class="campos">
+                        <div class="campoDuplo">
+                            <label for="cidade">Cidade:</label>
+                            <input type="text" name="cidade" id="cidade" size="80" placeholder="Digite o nome da Cidade"
+                                autocomplete="off">
 
-        <input type="submit" value="ENVIAR" id="enviar">
 
-    </form>
+                            <label for="estado">Estado:</label>
+                            <select id="estado">
+                                <option value="select">Selecione</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
 
-    <footer>
-        <p id="rodape"> 2021 |Banco Itaú </p>
-    </footer>
+                        </div>
+                    </div>
 
-    <script type="text/javascript" src="cep.js"></script>
-    <script type="text/javascript" src="script.js"></script>
+                </fieldset>
+                <p id=pCampos"><span> os campos marcados com * são de preenchimento obrigatório.</span></p>
+
+                <label for="idioma"></label>
+                <input type="hidden" name="idioma" id="idioma>">
+
+                <input type="submit" value="ENVIAR" id="enviar">
+
+            </form>
+
+            <footer>
+                <p id="rodape"> 2021 |Banco Itaú </p>
+            </footer>
+
+            <script type="text/javascript" src="cep.js"></script>
+            <script type="text/javascript" src="script.js"></script>
 
 </body>
 

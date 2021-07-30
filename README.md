@@ -27,8 +27,10 @@ Funcionalidades do site:
 
         >Validação do CPF:
                         Além da máscara no formato "___.___.___-__), é possível verificar se o CPF digitado é válido. 
-                                        Essa validação é realizada através de uma função cujo algorítimo realiza um cálculo com os 9 primeiros dígitos e identifica se o resultado do cálculo confere com os dois últimos dígitos, chamados de "dígitos verificadores". 
+                                        Essa validação é feita através de uma função cujo algorítimo realiza um cálculo com os 9 primeiros dígitos e identifica se o resultado do cálculo confere com os dois últimos dígitos, chamados de "dígitos verificadores". 
 
+>No formulário há um campo que não aparece para o cliente preencher.
+        Isso permite que, ao enviar os dados, seja possível verificar se o cadastro foi preenchido por um robô; se estiver preenchido, é porque foi preenchido por um robô e não pelo cliente.
 
 Referências:
 
