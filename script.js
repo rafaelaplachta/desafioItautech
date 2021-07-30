@@ -208,7 +208,7 @@ function valida() {
     if (document.formulario.cep.value == "") {
         alert("Por favor, preencha o campo 'CEP'.");
         document.getElementById("cep").focus();
-        return false
+        return false;
     }
     if (document.formulario.rua.value == "") {
         alert("por favor, preencha oo campo 'Logradouro'.");
@@ -221,16 +221,7 @@ function valida() {
         return false;
     }
     else {
-        alert("Seu cadastro foi enviado com sucesso!");
+        alert(document.formulario.nome.value + ", seu cadastro foi enviado com sucesso!");
         return true;
     }
-}
-//
-function verificaCPF(){
-
-if (document.getElementById("cpf").value.length < 11 || document.getElementById("cpf").value.length > 11){
-    alert ("CPF inválido.");
-    document.getElementById("cpf").focus();
-    return;
-}
 }
