@@ -122,6 +122,9 @@ function validaCPF() {
     cpf = cpf.replace(".", "");
     cpf = cpf.replace("-", "");
     cpf = cpf.replace(".", "");
+
+    //Elimina CPFs com números repetidos.
+
     if (cpf.length != 11 ||
         cpf == "00000000000" ||
         cpf == "11111111111" ||
@@ -134,10 +137,12 @@ function validaCPF() {
         cpf == "88888888888" ||
         cpf == "99999999999") {
 
-        document.getElementById("cpf").style.backgroundColor = "#faa"; //isso deixa o campo avermelhado
         document.getElementById("cpf").focus();
+        document.getElementById("cpf").style.backgroundColor = "#faa"; //isso deixa o campo avermelhado
 
-        alert("CPF inválido")
+
+        alert("CPF inválido. Por favor, informe um CPF válido.")
+        document.getElementById("cpf").focus();
         return false;
     } else {
         var soma = 0;
@@ -176,10 +181,11 @@ function validaCPF() {
         alert("CPF válido");
         return true;
     } else {
-        alert("CPF inválido")
-        document.getElementById("cpf").style.backgroundColor = "#faa";
+        alert("CPF inválido. Por favor, informe um CPF válido.")
         document.getElementById("cpf").focus();
-        return false;
+        document.getElementById("cpf").style.backgroundColor = "#faa";
+
+        return false; 
     }
 }
 
@@ -187,15 +193,12 @@ function validaCPF() {
 //Função para verificar se os campos obrigatórios estão vazios quando o usuário tentar enviar o formulário.
 
 function valida() {
+    if (!validaCPF())
+    return false;    
     if (document.formulario.nome.value == "") {
         alert("Por favor, preencha o campo 'Nome Completo'.");
         document.getElementById("nome").focus();
         return false;
-    }
-    if (document.formulario.cpf.value == "") {
-        alert("Por favor, preencha o campo 'CPF'.");
-        document.getElementById(cpf).focus();
-        return false
     }
     if (document.formulario.phone.value == "") {
         alert("Por favor, preencha o campo 'Celular'.");
@@ -215,10 +218,19 @@ function valida() {
     if (document.formulario.numero.value == "") {
         alert("Por favor, preencha o campo 'Numero'.");
         document.getElementById("numero").focus();
-        return false
+        return false;
     }
     else {
         alert("Seu cadastro foi enviado com sucesso!");
-        return false;
+        return true;
     }
+}
+//
+function verificaCPF(){
+
+if (document.getElementById("cpf").value.length < 11 || document.getElementById("cpf").value.length > 11){
+    alert ("CPF inválido.");
+    document.getElementById("cpf").focus();
+    return;
+}
 }

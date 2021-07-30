@@ -17,7 +17,7 @@
 
     <h1 id="cabecalho">CADASTRO PESSOAL</h1>
 
-    <form name="formulario" id="formulario" method="#" action="#" onsubmit="return valida()">
+    <form name="formulario" id="formulario" method="#" action="#" onsubmit="valida()">
 
         <fieldset class="campoGeral">
             <legend class="legenda">Dados Pessoais</legend>
@@ -46,9 +46,7 @@
             <div class="campos">
                 <label for="cpf">*CPF:</label>
                 <input type="text" name="cpf" id="cpf" size="14" maxlength="14" autocomplete="off">
-                <br>
-                <br>
-                <button id="btn" onclick="validaCPF()">Validar CPF</button>
+                
             </div>
 
             <div class="campos">
@@ -81,7 +79,10 @@
                 <label for="cep">*CEP:</label>
                 <input type="text" name="cep" id="cep" size="8" pattern="[0-9]+$" / maxlength="8"
                     placeholder="Apenas números" autocomplete="off">
-            </div>
+            <br>
+            <br>
+            <p>Digite o CEP e pressione a tecla enter.</p>
+                </div>
 
             <div class="campos">
                 <div class="campoDuplo">
