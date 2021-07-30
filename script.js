@@ -185,7 +185,7 @@ function validaCPF() {
         document.getElementById("cpf").focus();
         document.getElementById("cpf").style.backgroundColor = "#faa";
 
-        return false; 
+        return false;
     }
 }
 
@@ -194,7 +194,7 @@ function validaCPF() {
 
 function valida() {
     if (!validaCPF())
-    return false;    
+        return false;
     if (document.formulario.nome.value == "") {
         alert("Por favor, preencha o campo 'Nome Completo'.");
         document.getElementById("nome").focus();

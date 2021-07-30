@@ -68,5 +68,5 @@ const pesquisarCep = async () => {
 
 document.getElementById('cep')
 
-// A pesquisa do CEP será realizada no momento em que o foco sair da caixa de edição do input "CEP".
+    // A pesquisa do CEP será realizada no momento em que o foco sair da caixa de edição do input "CEP".
     .addEventListener('focusout', pesquisarCep);
